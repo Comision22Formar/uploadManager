@@ -1,0 +1,22 @@
+[
+   {
+      "id": "08af8239-0e0f-4d3e-80b8-894295fd9048",
+      "name": "Aspiradora",
+      "image": "1702992367619_one-image.webp"
+   },
+   {
+      "id": "53c6f425-af16-41f6-af18-b9eec3de5a60",
+      "name": "Auriculares",
+      "image": "1702992385448_one-image.jpg"
+   },
+   {
+      "id": "ba643c79-baeb-417c-a4f1-7d2e168e7ee8",
+      "name": "Convector",
+      "image": "1702992411549_one-image.webp"
+   },
+   {
+      "id": "91a1a5d1-0fa3-4112-b899-bc733bcbc5f3",
+      "name": "Nuevo producto",
+      "image": null
+   }
+]
