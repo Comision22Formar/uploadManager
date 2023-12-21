@@ -1,5 +1,6 @@
 const express = require('express');
-const { list, add, create, edit, update, remove } =require('../controllers/productMainImageController')
+const { list, add, create, edit, update, remove } =require('../controllers/productMainImageController');
+const upload = require('../middlewares/upload');
 const router = express.Router();
 
 /* /products-main-image" */
@@ -7,7 +8,14 @@ const router = express.Router();
 router 
     .get('/',list)
     .get('/add',add)
-    .post('/create',create)
+    .post('/create', upload.fields([
+        {
+            name : 'mainImage'
+        },
+        {
+            name : 'images'
+        }
+    ]), create)
     .get('/edit/:id',edit)
     .put('/update/:id',update)
     .delete('/remove/:id',remove)

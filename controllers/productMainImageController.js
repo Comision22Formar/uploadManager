@@ -3,9 +3,10 @@ module.exports = {
 
     },
     add : (req,res) => {
+        return res.render('productAddMainImage')
     },
     create :  (req,res) => {
-
+        return res.send(req.body)
     },
     edit : (req,res) => {
 
