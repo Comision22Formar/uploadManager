@@ -10,7 +10,7 @@ router
     .get('/add',add)
     .post('/add',upload.single('one-image'), create)
     .get('/edit/:id',edit)
-    .put('/update/:id',update)
+    .put('/update/:id',upload.single('one-image'),update)
     .delete('/remove/:id',remove)
 
 

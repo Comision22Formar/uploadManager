@@ -1,1 +1,13 @@
-[]
+[
+   {
+      "id": "ad8d002c-7e71-466c-878f-d343f61a7959",
+      "name": "Nuevo producto con UNA imagen PRINCIPAL y VARIAS SECUNDARIAS",
+      "mainImage": "1703162147591_mainImage.jpg",
+      "images": [
+         "1703162147596_images.jpg",
+         "1703162147597_images.jpg",
+         "1703162147598_images.jpg",
+         "1703162147715_images.jpg"
+      ]
+   }
+]

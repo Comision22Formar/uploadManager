@@ -10,22 +10,19 @@
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="card">
                     <div class="card-body">
-                        <form action="/products/updateOneImage/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <form action="/products-one-image/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nombre del producto</label>
                                 <input type="text" class="form-control" id="name" name="name" value="<%= name %>">
                               </div>
                               <div class="mb-3">
-                                <img class="img-fluid" src="/images/<%= image %>" alt="">
+                                <img class="img-fluid" src="/images/<%= image || 'Producto-sin-imagen.jpg' %>" alt="">
                               </div>
                               <div class="mb-3 d-flex justify-content-end gap-2">
                                 <label for="image" class="btn btn-secondary">Cambiar imagen</label>
-                                <input hidden class="form-control" type="file" id="image" name="image">
+                                <input hidden class="form-control" type="file" id="image" name="one-image">
                                 <button type="submit" class="btn btn-dark">Guardar</button>
                               </div>
-                             
-                            
-                            
                         </form>
                     </div>
                 </div>

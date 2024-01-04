@@ -1,3 +1,6 @@
+const {randomUUID} = require('crypto');
+const { readJSON, writeJSON } = require('../data');
+
 module.exports = {
     list : (req,res) => {
 
@@ -6,7 +9,21 @@ module.exports = {
         return res.render('productAddMainImage')
     },
     create :  (req,res) => {
-        return res.send(req.body)
+
+        const newProduct = {
+            id : randomUUID(),
+            name : req.body.name,
+            mainImage : req.files.mainImage ? req.files.mainImage[0].filename : null,
+            images : req.files.images ? req.files.images.map(image => image.filename) : null
+        }
+
+        const products = readJSON('productsMainImage.json');
+        products.push(newProduct);
+
+        writeJSON(products, 'productsMainImage.json');
+
+        return res.redirect('/')
+       
     },
     edit : (req,res) => {
 
